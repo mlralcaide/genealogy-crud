@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.division {
+    margin-bottom: 20px;
+}
+
+h2, h3, h4 {
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+img {
+    max-width: 100px;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+/* Estilo para los grupos de inputs */
+#persona-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+/* Estilo para cada grupo de input */
+#persona-form div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para las etiquetas de los inputs */
+#persona-form label {
+    margin-bottom: 5px;
+}
+
+.btn-add-person,
+.btn-clear-data {
+    background-color: #760e80;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+
+.btn-add-person:hover,
+.btn-clear-data:hover {
+    background-color: #e53ecf;
+    transition: background-color .3s;
+}
+
+.btn-add-data {    
+    background-color: none;
+    color: rgb(112, 11, 125);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;  
+    
+}
+
+.btn-add-data:hover {
+    background-color: #be86c4;
+    color: #7813a0;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color .3s;
+}
+
+.subdivision {
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+.subdivision h4 {
+    margin-bottom: 5px;
+}
+
+.subdivision p {
+    margin-left: 10px;
+}
+
+#person-list li {
+    cursor: pointer;
+}
+
+#person-list li:hover {
+    color: #b90df3; /* Color de fondo al pasar el ratón */
+}
+
