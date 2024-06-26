@@ -1,54 +1,54 @@
 document.addEventListener('DOMContentLoaded', function() {
     const personList = document.getElementById('person-list');
-    const personas = JSON.parse(localStorage.getItem('personas')) || [];
+    const people = JSON.parse(localStorage.getItem('people')) || [];
 
-    personas.forEach(persona => {
+    people.forEach(person => {
         const li = document.createElement('li');
-        li.classList.add('persona-item');
-        li.textContent = `${persona.nombre} ${persona.apellido} (${new Date(persona.eventos.fechaNacimiento).getFullYear()} - ${persona.eventos.fechaDefuncion ? new Date(persona.eventos.fechaDefuncion).getFullYear() : 'vive'})`;
-        li.dataset.id = persona.id;
+        li.classList.add('person-item');
+        li.textContent = `${person.firstName} ${person.lastName} (${new Date(person.events.birthDate).getFullYear()} - ${person.events.deathDate ? new Date(person.events.deathDate).getFullYear() : 'alive'})`;
+        li.dataset.id = person.id;
         li.addEventListener('click', function() {
-            localStorage.setItem('personaSeleccionada', JSON.stringify(persona));
-            window.location.href = 'detalles.html';
+            localStorage.setItem('selectedPerson', JSON.stringify(person));
+            window.location.href = 'details.html';
         });
         personList.appendChild(li);
     });
 
-    const personaForm = document.getElementById('persona-form');
-    personaForm.addEventListener('submit', function(event) {
+    const personForm = document.getElementById('person-form');
+    personForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        const nuevaPersona = {
+        const newPerson = {
             id: Date.now(),
-            nombre: document.getElementById('nombre').value,
-            apellido: document.getElementById('apellido').value,
-            eventos: {
-                fechaNacimiento: document.getElementById('fechaNacimiento').value,
-                lugarNacimiento: document.getElementById('lugarNacimiento').value,
-                fechaBautismo: document.getElementById('fechaBautismo').value,
-                lugarBautismo: document.getElementById('lugarBautismo').value,
-                fechaMatrimonio: document.getElementById('fechaMatrimonio').value,
-                lugarMatrimonio: document.getElementById('lugarMatrimonio').value,
-                fechaDefuncion: document.getElementById('fechaDefuncion').value,
-                lugarDefuncion: document.getElementById('lugarDefuncion').value,
+            firstName: document.getElementById('firstName').value,
+            lastName: document.getElementById('lastName').value,
+            events: {
+                birthDate: document.getElementById('birthDate').value,
+                birthPlace: document.getElementById('birthPlace').value,
+                baptismDate: document.getElementById('baptismDate').value,
+                baptismPlace: document.getElementById('baptismPlace').value,
+                marriageDate: document.getElementById('marriageDate').value,
+                marriagePlace: document.getElementById('marriagePlace').value,
+                deathDate: document.getElementById('deathDate').value,
+                deathPlace: document.getElementById('deathPlace').value,
             },
-            imagenURL: document.getElementById('imagenURL').value
+            imageURL: document.getElementById('imageURL').value
         };
 
-        personas.push(nuevaPersona);
-        localStorage.setItem('personas', JSON.stringify(personas));
+        people.push(newPerson);
+        localStorage.setItem('people', JSON.stringify(people));
 
         const li = document.createElement('li');
-        li.classList.add('persona-item');
-        li.textContent = `${nuevaPersona.nombre} ${nuevaPersona.apellido} (${new Date(nuevaPersona.eventos.fechaNacimiento).getFullYear()} - ${nuevaPersona.eventos.fechaDefuncion ? new Date(nuevaPersona.eventos.fechaDefuncion).getFullYear() : 'vive'})`;
-        li.dataset.id = nuevaPersona.id;
+        li.classList.add('person-item');
+        li.textContent = `${newPerson.firstName} ${newPerson.lastName} (${new Date(newPerson.events.birthDate).getFullYear()} - ${newPerson.events.deathDate ? new Date(newPerson.events.deathDate).getFullYear() : 'alive'})`;
+        li.dataset.id = newPerson.id;
         li.addEventListener('click', function() {
-            localStorage.setItem('personaSeleccionada', JSON.stringify(nuevaPersona));
-            window.location.href = 'detalles.html';
+            localStorage.setItem('selectedPerson', JSON.stringify(newPerson));
+            window.location.href = 'details.html';
         });
         personList.appendChild(li);
 
-        personaForm.reset();
+        personForm.reset();
     });
 
     const clearDataButton = document.getElementById('clear-data');

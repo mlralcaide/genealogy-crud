@@ -1,3 +1,4 @@
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,123 +8,109 @@ body {
 
 .container {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.division {
-    margin-bottom: 20px;
-}
-
-h2, h3, h4 {
-    margin-top: 0;
+/* Header styles */
+h1 {
+    text-align: center;
+    color: #333;
 }
 
 h2 {
-    font-size: 24px;
+    color: #666;
+    border-bottom: 2px solid #f4f4f9;
+    padding-bottom: 10px;
 }
 
-h3 {
-    font-size: 20px;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 5px;
+/* Form styles */
+#form-container {
+    margin-bottom: 20px;
 }
 
-h4 {
-    font-size: 18px;
-}
-
-p {
-    margin: 5px 0;
-}
-
-img {
-    max-width: 100px;
-    border-radius: 50%;
-    display: block;
-    margin-bottom: 10px;
-}
-
-
-/* Estilo para los grupos de inputs */
-#persona-form {
+#person-form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 10px 20px; /* Adjusted for better spacing between columns and rows */
 }
 
-/* Estilo para cada grupo de input */
-#persona-form div {
+#person-form div {
     display: flex;
     flex-direction: column;
 }
 
-/* Estilo para las etiquetas de los inputs */
-#persona-form label {
+#person-form label {
+    font-weight: bold;
     margin-bottom: 5px;
 }
 
-.btn-add-person,
-.btn-clear-data {
-    background-color: #760e80;
+#person-form input[type="text"],
+#person-form input[type="date"],
+#person-form input[type="url"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#person-form input[type="text"]::placeholder,
+#person-form input[type="date"]::placeholder,
+#person-form input[type="url"]::placeholder {
+    color: #ccc;
+}
+
+#person-form .btn-add-person {
+    grid-column: 1 / -1;
+    padding: 10px;
+    background-color: #e242af;
     color: white;
     border: none;
-    padding: 10px 15px;
+    border-radius: 4px;
     cursor: pointer;
-    border-radius: 5px;
-    margin: 5px;
 }
 
+#person-form .btn-add-person:hover {
+    background-color: #f314d6;
+}
 
-.btn-add-person:hover,
+/* List styles */
+#list-container {
+    margin-bottom: 20px;
+}
+
+#person-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.person-item {
+    padding: 10px;
+    background-color: #f9f9f9;   
+    margin-bottom: 5px;    
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.person-item:hover {
+    background-color: #f0f0f0;
+    color: #f30df3;
+}
+
+/* Clear data button styles */
+.btn-clear-data {
+    padding: 10px;
+    background-color: #8f4fd9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
 .btn-clear-data:hover {
-    background-color: #e53ecf;
-    transition: background-color .3s;
+    background-color: #b408f3;
 }
-
-.btn-add-data {    
-    background-color: none;
-    color: rgb(112, 11, 125);
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 5px;  
-    
-}
-
-.btn-add-data:hover {
-    background-color: #be86c4;
-    color: #7813a0;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 5px;
-    transition: background-color .3s;
-}
-
-.subdivision {
-    margin-bottom: 15px;
-    padding-left: 10px;
-}
-
-.subdivision h4 {
-    margin-bottom: 5px;
-}
-
-.subdivision p {
-    margin-left: 10px;
-}
-
-#person-list li {
-    cursor: pointer;
-}
-
-#person-list li:hover {
-    color: #b90df3; /* Color de fondo al pasar el ratón */
-}
-

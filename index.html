@@ -1,97 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/styles.css" />
-    <title>Árbol Genealógico</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Family Tree</title>
+</head>
+<body>
     <div class="container">
-      <h1>Árbol Genealógico</h1>
-      <div id="form-container">
-        <form id="persona-form">
-          <div>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" placeholder="Nombre" required />
-          </div>
-
-          <div>
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" placeholder="Apellido" required />
-          </div>
-
-          <div>
-            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
-            <input type="date" id="fechaNacimiento" />
-          </div>
-
-          <div>
-            <label for="lugarNacimiento">Lugar de Nacimiento:</label>
-            <input
-              type="text"
-              id="lugarNacimiento"
-              placeholder="Lugar de Nacimiento"
-            />
-          </div>
-
-          <div>
-            <label for="fechaBautismo">Fecha de Bautismo:</label>
-            <input type="date" id="fechaBautismo" />
-          </div>
-
-          <div>
-            <label for="lugarBautismo">Lugar de Bautismo:</label>
-            <input
-              type="text"
-              id="lugarBautismo"
-              placeholder="Lugar de Bautismo"
-            />
-          </div>
-
-          <div>
-            <label for="fechaMatrimonio">Fecha de Matrimonio:</label>
-            <input type="date" id="fechaMatrimonio" />
-          </div>
-
-          <div>
-            <label for="lugarMatrimonio">Lugar de Matrimonio:</label>
-            <input
-              type="text"
-              id="lugarMatrimonio"
-              placeholder="Lugar de Matrimonio"
-            />
-          </div>
-
-          <div>
-            <label for="fechaDefuncion">Fecha de Defunción:</label>
-            <input type="date" id="fechaDefuncion" />
-          </div>
-
-          <div>
-            <label for="lugarDefuncion">Lugar de Defunción:</label>
-            <input
-              type="text"
-              id="lugarDefuncion"
-              placeholder="Lugar de Defunción"
-            />
-          </div>
-
-          <input type="url" id="imagenURL" placeholder="URL de la Imagen" />
-          <button type="submit" class="btn-add-person">Agregar</button>
-        </form>
-      </div>
-      <div id="list-container">
-        <h2>Lista de Personas</h2>
-        <ul id="person-list">
-          <!-- Los items de la lista serán generados dinámicamente -->
-        </ul>
-      </div>
-      <button id="clear-data" class="btn-clear-data">
-        Borrar Datos Guardados
-      </button>
+        <h1>Family Tree</h1>
+        <div id="form-container">
+            <form id="person-form">
+                <div>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" placeholder="First Name" required>
+                </div>
+                <div>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" placeholder="Last Name" required>
+                </div>
+                <div>
+                    <label for="birthDate">Birth Date:</label>
+                    <input type="date" id="birthDate">
+                </div>
+                <div>
+                    <label for="birthPlace">Birth Place:</label>
+                    <input type="text" id="birthPlace" placeholder="Birth Place">
+                </div>
+                <div>
+                    <label for="baptismDate">Baptism Date:</label>
+                    <input type="date" id="baptismDate">
+                </div>
+                <div>
+                    <label for="baptismPlace">Baptism Place:</label>
+                    <input type="text" id="baptismPlace" placeholder="Baptism Place">
+                </div>
+                <div>
+                    <label for="marriageDate">Marriage Date:</label>
+                    <input type="date" id="marriageDate">
+                </div>
+                <div>
+                    <label for="marriagePlace">Marriage Place:</label>
+                    <input type="text" id="marriagePlace" placeholder="Marriage Place">
+                </div>
+                <div>
+                    <label for="deathDate">Death Date:</label>
+                    <input type="date" id="deathDate">
+                </div>
+                <div>
+                    <label for="deathPlace">Death Place:</label>
+                    <input type="text" id="deathPlace" placeholder="Death Place">
+                </div>
+                <input type="url" id="imageURL" placeholder="Image URL">
+                <button type="submit" class="btn-add-person">Add Person</button>
+            </form>
+        </div>
+        <div id="list-container">
+            <h2>Person List</h2>
+            <ul id="person-list">
+                <!-- Los items de la lista serán generados dinámicamente -->
+            </ul>
+        </div>
+        <button id="clear-data" class="btn-clear-data">Clear Saved Data</button>
     </div>
     <script src="./js/script.js"></script>
-    <script src="./js/detalles.js"></script>
-  </body>
+    <script src="./js/details.js"></script>
+</body>
 </html>

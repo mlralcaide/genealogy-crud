@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Details</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+    <div class="container">
+        <div id="image-name" class="division">
+            <img id="personImage" alt="Person Image" style="display:none;">
+            <h2 id="personName"></h2>
+            <p><strong>Birth:</strong> <span id="birthDatePerson"></span></p>
+        </div>
+        <div id="buttons" class="division">
+            <button>Person</button>
+            <button>Tree</button>
+        </div>
+        <div id="vital-data" class="division">
+            <h3>Vital Data</h3>
+            <div class="subdivision">
+                <h4>Birth</h4>
+                <p id="birthDate"></p>
+                <p id="birthPlace"></p>
+            </div>
+            <div class="subdivision">
+                <h4>Baptism</h4>
+                <p id="baptismDate"></p>
+                <p id="baptismPlace"></p>
+            </div>
+            <div class="subdivision">
+                <h4>Death</h4>
+                <p id="deathDate"></p>
+                <p id="deathPlace"></p>
+            </div>
+            <button>Edit</button>
+        </div>
+        <div id="events" class="division">
+            <h3>Events</h3>
+        </div>
+    </div>
+    <script src="./js/details.js"></script>
+</body>
+</html>
